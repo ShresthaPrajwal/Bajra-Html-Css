@@ -1,10 +1,15 @@
-function adjustIframeHeight() {
-  var iframes = document.querySelectorAll("iframe");
-  iframes.forEach(function (iframe) {
-    iframe.style.height =
-      iframe.contentWindow.document.body.scrollHeight + "px";
-  });
-}
 
-window.addEventListener("load", adjustIframeHeight);
-window.addEventListener("resize", adjustIframeHeight);
+console.log("Hello from index.js");
+
+
+var navbar = document.querySelectorAll(".navbar a");
+navbar.forEach(function (link) {
+  link.addEventListener("click", function (event) {
+    console.log("clicked");
+    if (event.target.tagName === "A") {
+      var iframe = document.querySelector("iframe");
+      iframe.src = event.target.href;
+      event.preventDefault();
+    }
+  });
+});

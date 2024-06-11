@@ -44,7 +44,7 @@ body {
 }
 
 a {
-  display: inline-block;
+  display: block;
   margin: 10px 15px;
   color: #3498db;
   text-decoration: none;
